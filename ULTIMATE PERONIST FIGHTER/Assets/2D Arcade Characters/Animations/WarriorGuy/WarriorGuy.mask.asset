@@ -1,0 +1,78 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1011 &101100000
+AvatarMask:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_Name: WarriorGuy.mask
+  m_Mask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+  m_Elements:
+  - m_Path: 
+    m_Weight: 1
+  - m_Path: root
+    m_Weight: 1
+  - m_Path: root/FEET_BACK
+    m_Weight: 1
+  - m_Path: root/FEET_BACK/slot [feet_back]
+    m_Weight: 1
+  - m_Path: root/FEET_FRONT
+    m_Weight: 1
+  - m_Path: root/FEET_FRONT/slot [feet_front]
+    m_Weight: 1
+  - m_Path: root/HIP
+    m_Weight: 1
+  - m_Path: root/HIP/slot [hip]
+    m_Weight: 1
+  - m_Path: root/LEG_LEFT01
+    m_Weight: 1
+  - m_Path: root/LEG_LEFT01/slot [leg_left01]
+    m_Weight: 1
+  - m_Path: root/LEG_LEFT02
+    m_Weight: 1
+  - m_Path: root/LEG_LEFT02/slot [leg_left02]
+    m_Weight: 1
+  - m_Path: root/LEG_RIGHT01
+    m_Weight: 1
+  - m_Path: root/LEG_RIGHT01/slot [leg_right01]
+    m_Weight: 1
+  - m_Path: root/LEG_RIGTH02
+    m_Weight: 1
+  - m_Path: root/LEG_RIGTH02/slot [leg_right02]
+    m_Weight: 1
+  - m_Path: root/TORSO
+    m_Weight: 1
+  - m_Path: root/TORSO/ARM_LEFT01
+    m_Weight: 1
+  - m_Path: root/TORSO/ARM_LEFT01/ARM_LEFT02
+    m_Weight: 1
+  - m_Path: root/TORSO/ARM_LEFT01/ARM_LEFT02/HAND_LEFT
+    m_Weight: 1
+  - m_Path: root/TORSO/ARM_LEFT01/ARM_LEFT02/HAND_LEFT/slot [hand_left]
+    m_Weight: 1
+  - m_Path: root/TORSO/ARM_LEFT01/ARM_LEFT02/slot [arm_left02]
+    m_Weight: 1
+  - m_Path: root/TORSO/ARM_LEFT01/slot [arm_left01]
+    m_Weight: 1
+  - m_Path: root/TORSO/ARM_RIGHT01
+    m_Weight: 1
+  - m_Path: root/TORSO/ARM_RIGHT01/ARM_RIGHT02
+    m_Weight: 1
+  - m_Path: root/TORSO/ARM_RIGHT01/ARM_RIGHT02/HAND_RIGHT
+    m_Weight: 1
+  - m_Path: root/TORSO/ARM_RIGHT01/ARM_RIGHT02/HAND_RIGHT/slot [hand_right]
+    m_Weight: 1
+  - m_Path: root/TORSO/ARM_RIGHT01/ARM_RIGHT02/slot [arm_right02]
+    m_Weight: 1
+  - m_Path: root/TORSO/ARM_RIGHT01/slot [arm_right01]
+    m_Weight: 1
+  - m_Path: root/TORSO/HEAD
+    m_Weight: 1
+  - m_Path: root/TORSO/HEAD/slot [head]
+    m_Weight: 1
+  - m_Path: root/TORSO/NECK
+    m_Weight: 1
+  - m_Path: root/TORSO/NECK/slot [neck]
+    m_Weight: 1
+  - m_Path: root/TORSO/slot [torso]
+    m_Weight: 1

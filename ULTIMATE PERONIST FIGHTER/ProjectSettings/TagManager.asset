@@ -1,0 +1,115 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!78 &1
+TagManager:
+  serializedVersion: 2
+  tags:
+  - Player
+  - Enemy
+  - Obstacle
+  layers:
+  - Default
+  - TransparentFX
+  - Ignore Raycast
+  - 
+  - Water
+  - UI
+  - 
+  - 
+  - Player
+  - Enemy
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  m_SortingLayers:
+  - name: background_03
+    uniqueID: 3855372893
+    locked: 0
+  - name: background_02
+    uniqueID: 1545418957
+    locked: 0
+  - name: background_01
+    uniqueID: 3878948573
+    locked: 0
+  - name: Default
+    uniqueID: 0
+    locked: 0
+  - name: forefront_01
+    uniqueID: 2288610875
+    locked: 0
+  - name: forefront_02
+    uniqueID: 3184277841
+    locked: 0
+  - name: forefront_03
+    uniqueID: 3766740761
+    locked: 0
+  - name: forefront_04
+    uniqueID: 2897859207
+    locked: 0
+  - name: forefront_05
+    uniqueID: 4061649123
+    locked: 0
+  - name: forefront_06
+    uniqueID: 3779866961
+    locked: 0
+  - name: forefront_07
+    uniqueID: 4178430775
+    locked: 0
+  - name: forefront_08
+    uniqueID: 1600151961
+    locked: 0
+  - name: forefront_09
+    uniqueID: 704159961
+    locked: 0
+  - name: forefront_10
+    uniqueID: 2681218445
+    locked: 0
+  - name: forefront_11
+    uniqueID: 2664951221
+    locked: 0
+  - name: forefront_12
+    uniqueID: 1861271569
+    locked: 0
+  - name: forefront_13
+    uniqueID: 84274081
+    locked: 0
+  - name: forefront_14
+    uniqueID: 2880112693
+    locked: 0
+  - name: forefront_15
+    uniqueID: 1831003749
+    locked: 0
+  - name: forefront_16
+    uniqueID: 1690933121
+    locked: 0
+  - name: forefront_17
+    uniqueID: 3047586773
+    locked: 0
+  - name: forefront_18
+    uniqueID: 913097277
+    locked: 0
+  - name: forefront_19
+    uniqueID: 3032704819
+    locked: 0
+  - name: forefront_20
+    uniqueID: 2738459281
+    locked: 0

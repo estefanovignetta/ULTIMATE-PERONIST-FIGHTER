@@ -1,0 +1,524 @@
+fileFormatVersion: 2
+guid: 1cea823767a984b97977234007dafa48
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: arm_left01
+    21300002: arm_right01
+    21300004: arm_left02
+    21300006: arm_right02
+    21300008: feet_back
+    21300010: feet_front
+    21300012: hand_closedback
+    21300014: hand_closedfront
+    21300016: hand_openback
+    21300018: hand_openfront
+    21300020: hand_punchback
+    21300022: hand_punchfront
+    21300024: head
+    21300026: head_hurt
+    21300028: head_shout
+    21300030: hip
+    21300032: leg_left01
+    21300034: leg_right01
+    21300036: leg_left02
+    21300038: leg_right02
+    21300040: neck
+    21300042: torso
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 1
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  cubemapConvolution: 0
+  cubemapConvolutionSteps: 8
+  cubemapConvolutionExponent: 1.5
+  seamlessCubemap: 0
+  textureFormat: -1
+  maxTextureSize: 1024
+  textureSettings:
+    filterMode: -1
+    aniso: 16
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  rGBM: 0
+  compressionQuality: 50
+  allowsAlphaSplitting: 0
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 100
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    sprites:
+    - name: arm_left01
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 305
+        width: 113
+        height: 205
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -44.5, y: 97.5}
+        - {x: -52.5, y: 90.5}
+        - {x: -52.5, y: -28.5}
+        - {x: -26.5, y: -98.5}
+        - {x: 11.5, y: -98.5}
+        - {x: 47.5, y: -73.5}
+        - {x: 47.5, y: 97.5}
+    - name: arm_right01
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 305
+        width: 113
+        height: 205
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -44.5, y: 97.5}
+        - {x: -52.5, y: 90.5}
+        - {x: -52.5, y: -28.5}
+        - {x: -26.5, y: -98.5}
+        - {x: 11.5, y: -98.5}
+        - {x: 47.5, y: -73.5}
+        - {x: 47.5, y: 97.5}
+    - name: arm_left02
+      rect:
+        serializedVersion: 2
+        x: 194
+        y: 185
+        width: 154
+        height: 87
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -77, y: 40.5}
+        - {x: -77, y: -16.5}
+        - {x: -50, y: -39.5}
+        - {x: 61, y: -39.5}
+        - {x: 77, y: -18.5}
+        - {x: 77, y: 38.5}
+        - {x: 61, y: 40.5}
+    - name: arm_right02
+      rect:
+        serializedVersion: 2
+        x: 194
+        y: 185
+        width: 154
+        height: 87
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -77, y: 40.5}
+        - {x: -77, y: -16.5}
+        - {x: -50, y: -39.5}
+        - {x: 61, y: -39.5}
+        - {x: 77, y: -18.5}
+        - {x: 77, y: 38.5}
+        - {x: 61, y: 40.5}
+    - name: feet_back
+      rect:
+        serializedVersion: 2
+        x: 732
+        y: 23
+        width: 160
+        height: 79
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -36, y: 39.5}
+        - {x: -74, y: 23.5}
+        - {x: -75, y: 22.5}
+        - {x: -75, y: -35.5}
+        - {x: 70, y: -35.5}
+        - {x: 75, y: -18.5}
+        - {x: 75, y: 1.5}
+        - {x: 15, y: 39.5}
+    - name: feet_front
+      rect:
+        serializedVersion: 2
+        x: 350
+        y: 185
+        width: 140
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 33, y: 40}
+        - {x: -46, y: 40}
+        - {x: -64, y: 35}
+        - {x: -64, y: -28}
+        - {x: -44, y: -38}
+        - {x: -32, y: -40}
+        - {x: 62, y: -40}
+        - {x: 70, y: -33}
+        - {x: 70, y: -3}
+        - {x: 68, y: 0}
+    - name: hand_closedback
+      rect:
+        serializedVersion: 2
+        x: 301
+        y: 274
+        width: 86
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 1, y: 48}
+        - {x: -41, y: 31}
+        - {x: -41, y: -37}
+        - {x: -39, y: -48}
+        - {x: 15, y: -48}
+        - {x: 41, y: -42}
+        - {x: 41, y: 29}
+        - {x: 30, y: 48}
+    - name: hand_closedfront
+      rect:
+        serializedVersion: 2
+        x: 389
+        y: 267
+        width: 86
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 21, y: 47}
+        - {x: -9, y: 37}
+        - {x: -41, y: 25}
+        - {x: -41, y: -48}
+        - {x: 34, y: -48}
+        - {x: 40, y: -13}
+        - {x: 40, y: 24}
+        - {x: 28, y: 47}
+    - name: hand_openback
+      rect:
+        serializedVersion: 2
+        x: 894
+        y: 23
+        width: 127
+        height: 101
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -28.5, y: 50.5}
+        - {x: -58.5, y: 31.5}
+        - {x: -63.5, y: 25.5}
+        - {x: -63.5, y: -50.5}
+        - {x: 62.5, y: -50.5}
+        - {x: 63.5, y: -35.5}
+        - {x: 63.5, y: 47.5}
+        - {x: 43.5, y: 50.5}
+    - name: hand_openfront
+      rect:
+        serializedVersion: 2
+        x: 492
+        y: 185
+        width: 127
+        height: 101
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -28.5, y: 50.5}
+        - {x: -58.5, y: 31.5}
+        - {x: -63.5, y: 23.5}
+        - {x: -63.5, y: -50.5}
+        - {x: 62.5, y: -50.5}
+        - {x: 63.5, y: -37.5}
+        - {x: 63.5, y: 47.5}
+        - {x: 45.5, y: 50.5}
+    - name: hand_punchback
+      rect:
+        serializedVersion: 2
+        x: 301
+        y: 376
+        width: 92
+        height: 78
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -46, y: 39}
+        - {x: -46, y: -25}
+        - {x: -33, y: -38}
+        - {x: -21, y: -39}
+        - {x: 39, y: -39}
+        - {x: 46, y: -29}
+        - {x: 46, y: 30}
+        - {x: 42, y: 39}
+    - name: hand_punchfront
+      rect:
+        serializedVersion: 2
+        x: 477
+        y: 288
+        width: 92
+        height: 78
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -46, y: 39}
+        - {x: -46, y: -7}
+        - {x: -36, y: -39}
+        - {x: 35, y: -39}
+        - {x: 46, y: -14}
+        - {x: 46, y: 37}
+        - {x: 40, y: 39}
+    - name: head
+      rect:
+        serializedVersion: 2
+        x: 194
+        y: 23
+        width: 130
+        height: 160
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -22, y: 75}
+        - {x: -57, y: 46}
+        - {x: -57, y: -20}
+        - {x: 14, y: -59}
+        - {x: 54, y: -59}
+        - {x: 65, y: -34}
+        - {x: 65, y: 67}
+        - {x: 41, y: 75}
+    - name: head_hurt
+      rect:
+        serializedVersion: 2
+        x: 326
+        y: 23
+        width: 130
+        height: 160
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -22, y: 75}
+        - {x: -57, y: 46}
+        - {x: -57, y: -20}
+        - {x: 14, y: -59}
+        - {x: 54, y: -59}
+        - {x: 65, y: -34}
+        - {x: 65, y: 67}
+        - {x: 41, y: 75}
+    - name: head_shout
+      rect:
+        serializedVersion: 2
+        x: 458
+        y: 23
+        width: 130
+        height: 160
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -29, y: 75}
+        - {x: -41, y: 54}
+        - {x: -49, y: 33}
+        - {x: -57, y: 7}
+        - {x: -57, y: -19}
+        - {x: 7, y: -61}
+        - {x: 52, y: -61}
+        - {x: 65, y: -29}
+        - {x: 65, y: 63}
+        - {x: 42, y: 75}
+    - name: hip
+      rect:
+        serializedVersion: 2
+        x: 590
+        y: 23
+        width: 140
+        height: 120
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -52, y: 60}
+        - {x: -58, y: 47}
+        - {x: -60, y: 31}
+        - {x: -60, y: -23}
+        - {x: -50, y: -47}
+        - {x: 44, y: -47}
+        - {x: 60, y: -22}
+        - {x: 60, y: 60}
+    - name: leg_left01
+      rect:
+        serializedVersion: 2
+        x: 209
+        y: 274
+        width: 90
+        height: 180
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 10, y: 86}
+        - {x: -39, y: 86}
+        - {x: -42, y: 83}
+        - {x: -42, y: -90}
+        - {x: 1, y: -90}
+        - {x: 4, y: -88}
+        - {x: 39, y: 20}
+        - {x: 39, y: 75}
+        - {x: 37, y: 83}
+      - - {x: 24, y: 79}
+        - {x: 25, y: 76}
+        - {x: 29, y: 76}
+        - {x: 31, y: 77}
+        - {x: 31, y: 81}
+        - {x: 30, y: 83}
+        - {x: 26, y: 83}
+        - {x: 24, y: 81}
+    - name: leg_right01
+      rect:
+        serializedVersion: 2
+        x: 209
+        y: 274
+        width: 90
+        height: 180
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 10, y: 86}
+        - {x: -39, y: 86}
+        - {x: -42, y: 83}
+        - {x: -42, y: -90}
+        - {x: 1, y: -90}
+        - {x: 4, y: -88}
+        - {x: 39, y: 20}
+        - {x: 39, y: 75}
+        - {x: 37, y: 83}
+      - - {x: 24, y: 79}
+        - {x: 25, y: 76}
+        - {x: 29, y: 76}
+        - {x: 31, y: 77}
+        - {x: 31, y: 81}
+        - {x: 30, y: 83}
+        - {x: 26, y: 83}
+        - {x: 24, y: 81}
+    - name: leg_left02
+      rect:
+        serializedVersion: 2
+        x: 117
+        y: 305
+        width: 90
+        height: 194
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 30, y: 96}
+        - {x: 5, y: 96}
+        - {x: -6, y: 92}
+        - {x: -35, y: 31}
+        - {x: -35, y: -47}
+        - {x: -31, y: -88}
+        - {x: -29, y: -89}
+        - {x: 29, y: -89}
+        - {x: 40, y: -82}
+        - {x: 40, y: 39}
+        - {x: 39, y: 90}
+    - name: leg_right02
+      rect:
+        serializedVersion: 2
+        x: 117
+        y: 305
+        width: 90
+        height: 194
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 30, y: 96}
+        - {x: 5, y: 96}
+        - {x: -6, y: 92}
+        - {x: -35, y: 31}
+        - {x: -35, y: -47}
+        - {x: -31, y: -88}
+        - {x: -29, y: -89}
+        - {x: 29, y: -89}
+        - {x: 40, y: -82}
+        - {x: 40, y: 39}
+        - {x: 39, y: 90}
+    - name: neck
+      rect:
+        serializedVersion: 2
+        x: 395
+        y: 369
+        width: 72
+        height: 92
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -18, y: 46}
+        - {x: -36, y: 20}
+        - {x: -36, y: -21}
+        - {x: -22, y: -46}
+        - {x: 25, y: -46}
+        - {x: 36, y: -40}
+        - {x: 36, y: 26}
+        - {x: 0, y: 46}
+    - name: torso
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 23
+        width: 190
+        height: 280
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 86, y: 94}
+        - {x: 85, y: 100}
+        - {x: 41, y: 131}
+        - {x: -41, y: 131}
+        - {x: -73, y: 88}
+        - {x: -85, y: 36}
+        - {x: -86, y: 26}
+        - {x: -86, y: -109}
+        - {x: -64, y: -134}
+        - {x: -24, y: -134}
+        - {x: -2, y: -129}
+        - {x: 19, y: -108}
+        - {x: 43, y: -39}
+        - {x: 86, y: 36}
+    outline: []
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
