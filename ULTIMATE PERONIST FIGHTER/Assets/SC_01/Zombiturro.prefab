@@ -761,6 +761,7 @@ GameObject:
   - 114: {fileID: 11488370}
   - 114: {fileID: 11416990}
   - 114: {fileID: 11491612}
+  - 114: {fileID: 11477950}
   m_Layer: 9
   m_Name: Zombiturro
   m_TagString: Enemy
@@ -2073,7 +2074,7 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 184988}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 2247eb4bdc4d5e147b7303a7dc970dd6, type: 3}
   m_Name: 
@@ -2156,6 +2157,50 @@ MonoBehaviour:
   m_FillAmount: 1
   m_FillClockwise: 1
   m_FillOrigin: 0
+--- !u!114 &11477950
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 184988}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b0b20ef0ef2160e469a79f9f6de6ea54, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 0}
+  _punch01: {fileID: 8300000, guid: c5920d3cd7584a04ba733230f1ffc4be, type: 3}
+  _punch02: {fileID: 8300000, guid: b6ef50b8f81c6bf4cb36344728897364, type: 3}
+  _throw: {fileID: 8300000, guid: 8ac5a77da46ee7448b425e9410960f35, type: 3}
+  taunt_sounds:
+  - {fileID: 8300000, guid: c05fb0af82d948243b3869006561f06e, type: 3}
+  - {fileID: 8300000, guid: 15748fa547d44c64eba3464d2192d7b4, type: 3}
+  - {fileID: 8300000, guid: 77daa710c8f04d647a436070739dddbd, type: 3}
+  - {fileID: 8300000, guid: 517ace9c79d22e94a821ddd32324abd0, type: 3}
+  - {fileID: 8300000, guid: 36e04aa4f0ef0d042b1e314f76f07be6, type: 3}
+  - {fileID: 8300000, guid: 247083cc0aca96945aef48b4c080ec3c, type: 3}
+  - {fileID: 8300000, guid: 17048d0677555124f98d55d31a3072ec, type: 3}
+  - {fileID: 8300000, guid: 2a42d7c8362772a42ad9def4ca3354e7, type: 3}
+  - {fileID: 8300000, guid: f2e19b34c2728204aa76861f51974c54, type: 3}
+  punch_sounds:
+  - {fileID: 8300000, guid: 1c48398d1b23ad04e9d1d15dd529b0e5, type: 3}
+  - {fileID: 8300000, guid: c9fb421b8c007ac478acf29184458f64, type: 3}
+  - {fileID: 8300000, guid: be5366e9a2d286b439d76ce734db665e, type: 3}
+  hit_sounds:
+  - {fileID: 8300000, guid: 0a3c87190eccb374d8901cb6ee657a52, type: 3}
+  - {fileID: 8300000, guid: 81a9f7672780f1243bb9b02613262d30, type: 3}
+  speed: 3
+  onAttack: 0
+  attack_counter: 0
+  facing_right: 0
+  facing_up: 0
+  moving_right: 0
+  moving_left: 0
+  moving_up: 0
+  moving_down: 0
+  obsavoidMask:
+    serializedVersion: 2
+    m_Bits: 1280
 --- !u!114 &11488370
 MonoBehaviour:
   m_ObjectHideFlags: 1

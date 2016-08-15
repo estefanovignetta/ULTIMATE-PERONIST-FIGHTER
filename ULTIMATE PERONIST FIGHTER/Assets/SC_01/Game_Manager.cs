@@ -19,7 +19,7 @@ public class Game_Manager : MonoBehaviour {
     private bool wave01_01, wave01_02, wave01_03;
     // Use this for initialization
     void Awake () {
-        Cursor.visible = false;
+        //Cursor.visible = false;
         Time.timeScale = 1;
         mm = player.GetComponent<Movement_Manager>();
         auso = GetComponent<AudioSource>();
