@@ -367,9 +367,11 @@ public class AI_optimized : MonoBehaviour
         bool frontHit, backHit;
         bool target_isright, target_isup;
         float rayRotation = 20f;
+        float rayLength = 2f;
         frontHit = backHit = false;
         List<Vector3> NormalList = new List<Vector3>();
-        Collider rayCollider;
+        Collider rayCollider = null;
+        BoxCollider their_bc;
 
         //DEFINING STARTING POINTS
         if (target.y >= bc.center.y - bc.size.y / 2) target_isup = true;
@@ -383,48 +385,48 @@ public class AI_optimized : MonoBehaviour
         backAimingAt = (target - backStart).normalized;
 
         // ---DEBUGGING PURPOSES---
-        Debug.DrawRay(frontStart, frontAimingAt, Color.red, .25f);
-        Debug.DrawRay(frontStart, Quaternion.Euler(0, -rayRotation, 0) * frontAimingAt, Color.red, .5f);
-        Debug.DrawRay(frontStart, Quaternion.Euler(0, rayRotation, 0) * frontAimingAt, Color.red, .5f);
+        Debug.DrawRay(frontStart, frontAimingAt * rayLength, Color.red, .25f);
+        Debug.DrawRay(frontStart, Quaternion.Euler(0, -rayRotation, 0) * frontAimingAt * rayLength, Color.red, .5f);
+        Debug.DrawRay(frontStart, Quaternion.Euler(0, rayRotation, 0) * frontAimingAt * rayLength, Color.red, .5f);
 
-        Debug.DrawRay(backStart, backAimingAt, Color.red, .25f);
-        Debug.DrawRay(backStart, Quaternion.Euler(0, -rayRotation, 0) * backAimingAt, Color.red, .5f);
-        Debug.DrawRay(backStart, Quaternion.Euler(0, rayRotation, 0) * backAimingAt, Color.red, .5f);
+        Debug.DrawRay(backStart, backAimingAt * rayLength, Color.red, .25f);
+        Debug.DrawRay(backStart, Quaternion.Euler(0, -rayRotation, 0) * backAimingAt * rayLength, Color.red, .5f);
+        Debug.DrawRay(backStart, Quaternion.Euler(0, rayRotation, 0) * backAimingAt * rayLength, Color.red, .5f);
         // ---
 
         //CHECKING IF THERE IS A FRONT RAY TOUCHING SOMETHING
-        if (Physics.Raycast(frontStart, frontAimingAt, out frontRay01, 1f, obsavoidMask))
+        if (Physics.Raycast(frontStart, frontAimingAt, out frontRay01, rayLength, obsavoidMask))
         {
             frontHit = true;
             rayCollider = frontRay01.collider;
             if (!NormalList.Contains(frontRay01.normal)) NormalList.Add(frontRay01.normal);
         }
-        if (Physics.Raycast(frontStart, Quaternion.Euler(0, -rayRotation, 0) * frontAimingAt, out frontRay02, 1f, obsavoidMask))
+        if (Physics.Raycast(frontStart, Quaternion.Euler(0, -rayRotation, 0) * frontAimingAt, out frontRay02, rayLength, obsavoidMask))
         {
             frontHit = true;
             rayCollider = frontRay02.collider;
             if (!NormalList.Contains(frontRay02.normal)) NormalList.Add(frontRay02.normal);
         }
-        if (Physics.Raycast(frontStart, Quaternion.Euler(0, rayRotation, 0) * frontAimingAt, out frontRay03, 1f, obsavoidMask))
+        if (Physics.Raycast(frontStart, Quaternion.Euler(0, rayRotation, 0) * frontAimingAt, out frontRay03, rayLength, obsavoidMask))
         {
             frontHit = true;
             rayCollider = frontRay03.collider;
             if (!NormalList.Contains(frontRay03.normal)) NormalList.Add(frontRay03.normal);
         }
         //CHECKING IF THERE IS A BACK RAY TOUCHING SOMETHING
-        if (Physics.Raycast(backStart, backAimingAt, out backRay01, 1f, obsavoidMask))
+        if (Physics.Raycast(backStart, backAimingAt, out backRay01, rayLength, obsavoidMask))
         {
             backHit = true;
             rayCollider = backRay01.collider;
             if (!NormalList.Contains(backRay01.normal)) NormalList.Add(backRay01.normal);
         }
-        if (Physics.Raycast(backStart, Quaternion.Euler(0, -rayRotation, 0) * backAimingAt, out backRay02, 1f, obsavoidMask))
+        if (Physics.Raycast(backStart, Quaternion.Euler(0, -rayRotation, 0) * backAimingAt, out backRay02, rayLength, obsavoidMask))
         {
             backHit = true;
             rayCollider = backRay02.collider;
             if (!NormalList.Contains(backRay02.normal)) NormalList.Add(backRay02.normal);
         }
-        if (Physics.Raycast(backStart, Quaternion.Euler(0, rayRotation, 0) * backAimingAt, out backRay03, 1f, obsavoidMask))
+        if (Physics.Raycast(backStart, Quaternion.Euler(0, rayRotation, 0) * backAimingAt, out backRay03, rayLength, obsavoidMask))
         {
             backHit = true;
             rayCollider = backRay03.collider;
@@ -432,18 +434,128 @@ public class AI_optimized : MonoBehaviour
         }
 
         // ---DEBUGGING PURPOSES---
-        if (frontHit || backHit)
+        /*if (frontHit || backHit)
         {
             if (frontHit) print("Algo tapó los rayos de adelante.");
             if (backHit) print("Algo tapó los rayos de atrás.");
             for (int i = 0; i < NormalList.Count; i++)
                 print(NormalList[i]);
             Debug.Break();
-        }
+        }*/
         // ---
 
         //CASE 1 - Nothing blocks the rays
+        if (!backHit && !frontHit)
+        {
+            Vector3 aux = target - transform.position;
+            aux = new Vector3(aux.x, aux.y, 0);
+            if (aux.magnitude < 0.25f)
+            {
+                //target = transform.position + aux;
+                //target = transform.position;
+                print("No hits. Short.");
+                //Debug.Break();
+            }
+            else
+            {
+                target = transform.position + aux.normalized * 1 / 4;
+                print("No hits. Long.");
+                //Debug.Break();
+            }
+        }
         //CASE 2 - Something blocks the rays from the front or the back
+        if (frontHit || backHit)
+        {
+            their_bc = rayCollider.GetComponent<BoxCollider>();
+            Vector3 aux1, aux2;
+            aux1 = aux2 = Vector3.zero;
+            float dist1, dist2;
+            Vector3 nuTarget, nuDirection;
+            nuTarget = nuDirection = Vector3.zero;
+
+            for(int i=0; i < NormalList.Count; i++)
+            {
+                // If ray hit from above...
+                if (NormalList[i] == new Vector3(0, 0, 1f))
+                {
+                    aux1.x = their_bc.center.x - their_bc.size.x / 2 - bc.size.x / 2;
+                    aux1.y = their_bc.center.z + their_bc.size.z / 2 + bc.size.z / 2;
+                    aux2.x = their_bc.center.x + their_bc.size.x / 2 + bc.size.x / 2;
+                    aux2.y = aux1.y;
+
+                    aux1 = rayCollider.transform.TransformPoint(aux1);
+                    aux2 = rayCollider.transform.TransformPoint(aux2);
+
+                    dist1 = (target - aux1).magnitude;
+                    dist2 = (target - aux2).magnitude;
+                    if (dist1 < dist2) nuTarget = aux1;
+                    else nuTarget = aux2;
+
+                    nuDirection += (nuTarget - transform.position).normalized;
+                }
+                // If ray hit from the right
+                if (NormalList[i] == new Vector3(1f, 0, 0))
+                {
+                    aux1.x = their_bc.center.x + their_bc.size.x / 2 + bc.size.x / 2;
+                    aux1.y = their_bc.center.z + their_bc.size.z / 2 + bc.size.z / 2;
+                    aux2.x = aux1.x;
+                    aux2.y = their_bc.center.z - their_bc.size.z / 2 - bc.size.z / 2;
+
+                    aux1 = rayCollider.transform.TransformPoint(aux1);
+                    aux2 = rayCollider.transform.TransformPoint(aux2);
+
+                    dist1 = (target - aux1).magnitude;
+                    dist2 = (target - aux2).magnitude;
+                    if (dist1 < dist2) nuTarget = aux1;
+                    else nuTarget = aux2;
+
+                    nuDirection += (nuTarget - transform.position).normalized;
+                }
+                //If ray hit from below
+                if (NormalList[i] == new Vector3(0, 0, -1f))
+                {
+                    aux1.x = their_bc.center.x - their_bc.size.x / 2 - bc.size.x / 2;
+                    aux1.y = their_bc.center.z - their_bc.size.z / 2 - bc.size.z / 2;
+                    aux2.x = their_bc.center.x + their_bc.size.x / 2 + bc.size.x / 2;
+                    aux2.y = aux1.y;
+
+                    aux1 = rayCollider.transform.TransformPoint(aux1);
+                    aux2 = rayCollider.transform.TransformPoint(aux2);
+
+                    dist1 = (target - aux1).magnitude;
+                    dist2 = (target - aux2).magnitude;
+                    if (dist1 < dist2) nuTarget = aux1;
+                    else nuTarget = aux2;
+
+                    nuDirection += (nuTarget - transform.position).normalized;
+                }
+                // If ray hit from the left
+                if (NormalList[i] == new Vector3(-1f, 0, 0))
+                {
+                    aux1.x = their_bc.center.x - their_bc.size.x / 2 - bc.size.x / 2;
+                    aux1.y = their_bc.center.z + their_bc.size.z / 2 + bc.size.z / 2;
+                    aux2.x = aux1.x;
+                    aux2.y = their_bc.center.z - their_bc.size.z / 2 - bc.size.z / 2;
+
+                    aux1 = rayCollider.transform.TransformPoint(aux1);
+                    aux2 = rayCollider.transform.TransformPoint(aux2);
+
+                    dist1 = (target - aux1).magnitude;
+                    dist2 = (target - aux2).magnitude;
+                    if (dist1 < dist2) nuTarget = aux1;
+                    else nuTarget = aux2;
+
+                    nuDirection += (nuTarget - transform.position).normalized;
+                }
+            }
+            nuDirection = nuDirection.normalized;
+            //target = nuTarget;
+            target = transform.position + nuDirection;
+            print("El nuevo goal está en: " + nuTarget);
+            print("La nueva dirección de movimiento es: " + nuDirection);
+            //Debug.Break();
+        }
+            
         //CASE 3 - Something blocks the rays from both sides
 
 
